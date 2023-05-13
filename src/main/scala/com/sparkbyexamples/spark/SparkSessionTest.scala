@@ -11,6 +11,8 @@ object SparkSessionTest {
       .master("local[1]")
       .appName("SparkByExample")
       .getOrCreate();
+
+    spark.sparkContext.setLogLevel("ERROR")
     
     println("First SparkContext:")
     println("APP Name :"+spark.sparkContext.appName);
